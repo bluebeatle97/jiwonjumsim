@@ -79,8 +79,8 @@ body, html {
     border-radius: 50%; /* Makes the main shape circular */
     padding: 20px;
     text-align: center;
-    width: 250px;
-    height: 150px;
+    width: 300px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,13 +113,22 @@ body, html {
 }
 
 #restaurant-info {
-    color: #000;
-    font-weight: bold;
+    font-family: 'Gungsuh', serif;
+    color: #000; /* Adjusted from rgb(0,0,0) */
+    font-weight: 950;
 }
 
 #restaurant-info p {
-    margin: 5px 0;
-    font-size: 1.4rem; /* Slightly smaller font to fit */
+    margin: 8px 0;
+    font-size: 26px;
+    letter-spacing: 1px;
+    color: white;
+    /* Bold outline for readability */
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 
 .title {
@@ -135,8 +144,7 @@ body, html {
     border: none;
     cursor: pointer;
     font-family: 'Gungsuh', serif;
-    color: white; /* 글자색은 흰색 */
-    /* 검은색 테두리 효과 (text-shadow 4방향) */
+    color: white;
     text-shadow: 
         -1px -1px 0 #000,  
          1px -1px 0 #000,
@@ -157,7 +165,7 @@ body, html {
 }
 
 .loading-text {
-    font-size: 20px; /* As requested */
+    font-size: 40px; /* As requested */
     color: white;
     text-shadow: 2px 2px 4px #000000;
     text-align: center;
