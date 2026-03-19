@@ -76,10 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Reset button now goes back to the category selection screen
+    // 4. Reset button now reloads the page
     resetButton.addEventListener('click', () => {
-        resultScreen.classList.remove('active');
-        categoryScreen.classList.add('active');
+        location.reload();
     });
 
     // Event listener for the copy address button (no changes)
