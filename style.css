@@ -24,7 +24,7 @@ body, html {
     width: 100%;
     height: 100%;
     max-width: 390px;
-    max-height: 844px;
+    max-height: 780px;
     position: relative;
     overflow: hidden;
     aspect-ratio: 9 / 16;
@@ -52,7 +52,7 @@ body, html {
 /* Using absolute GitHub URLs as requested for deployment */
 #start-screen, #category-screen { 
     width: 390px;
-    height: 844px;
+    height: 780px;
     background-image: url('https://raw.githubusercontent.com/bluebeatle97/jiwonjumsim/main/img/002.jpg'); 
 }
 
@@ -62,13 +62,13 @@ body, html {
 
 #loading-screen { 
     width: 390px;
-    height: 844px;
+    height: 780px;
     background-image: url('https://raw.githubusercontent.com/bluebeatle97/jiwonjumsim/main/img/001.jpg'); 
     justify-content: flex-start; 
 }
 #result-screen { 
     width: 390px;
-    height: 844px;
+    height: 780px;
     background-image: url('https://raw.githubusercontent.com/bluebeatle97/jiwonjumsim/main/img/003.jpg'); 
     justify-content: flex-start; 
 }
