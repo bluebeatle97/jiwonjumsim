@@ -1,33 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>지원지원지원이 점심메뉴 추천기</title>
+    <title>지원 점심</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gungsuh&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="app-container">
+        <!-- Start Screen -->
         <div id="start-screen" class="screen active">
-            <div class="title">지원지원지원이 점심메뉴 추천기</div>
-            <button id="start-button">게임 스타트</button>
+            <h1 class="title">지원아 뭐먹지</h1>
+            <button id="start-button" class="rainbow-button">점메추받기</button>
         </div>
 
+        <!-- Category Screen -->
+        <div id="category-screen" class="screen">
+            <button class="category-button rainbow-button" data-category="korean">한식</button>
+            <button class="category-button rainbow-button" data-category="chinese">중식</button>
+            <button class="category-button rainbow-button" data-category="japanese">일식</button>
+            <button class="category-button rainbow-button" data-category="western">양식</button>
+            <button class="category-button rainbow-button" data-category="vegan">채식</button>
+        </div>
+
+        <!-- Loading Screen -->
         <div id="loading-screen" class="screen">
-            <div class="loading-text">점심메뉴고르는중...</div>
+            <p class="loading-text">오늘은 또 뭘 먹지...?</p>
         </div>
 
+        <!-- Result Screen -->
         <div id="result-screen" class="screen">
             <div id="result-content">
                 <div id="restaurant-info">
-                    <p id="restaurant-name"></p>
-                    <p id="restaurant-menu"></p>
-                    <p id="restaurant-price"></p>
+                    <p id="restaurant-name">식당 이름</p>
+                    <p id="restaurant-menu">대표 메뉴</p>
+                    <p id="restaurant-price">가격</p>
                 </div>
             </div>
-            <button id="copy-address-button">주소 복사</button>
-            <button id="reset-button">다시 추천</button>
+            <button id="copy-address-button" class="rainbow-button">주소 복사</button>
+            <button id="reset-button" class="rainbow-button">다시 추천</button>
         </div>
     </div>
     <script src="main.js"></script>

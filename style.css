@@ -9,7 +9,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #d0ff00, #e100ff, #ff3c00, #ff0000, #0011ff, #7bff00);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
@@ -50,33 +50,66 @@ body, html {
 }
 
 /* Using absolute GitHub URLs as requested for deployment */
-#start-screen { background-image: url('https://raw.githubusercontent.com/bluebeatle97/jiwonjumsim/main/img/002.jpg'); }
+#start-screen, #category-screen { 
+    width: 390px;
+    height: 844px;
+    background-image: url('https://raw.githubusercontent.com/bluebeatle97/jiwonjumsim/main/img/002.jpg'); 
+}
+
+#category-screen {
+    gap: 15px; /* Spacing between category buttons */
+}
+
 #loading-screen { 
+    width: 390px;
+    height: 844px;
     background-image: url('https://raw.githubusercontent.com/bluebeatle97/jiwonjumsim/main/img/001.jpg'); 
     justify-content: flex-start; 
 }
 #result-screen { 
+    width: 390px;
+    height: 844px;
     background-image: url('https://raw.githubusercontent.com/bluebeatle97/jiwonjumsim/main/img/003.jpg'); 
     justify-content: flex-start; 
 }
 
 #result-content {
+    position: relative; /* For positioning pseudo-elements */
+    background: #fff;
+    border-radius: 50%; /* Makes the main shape circular */
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    height: 150px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin-top: 280px;
-    width: 80%;
-    height: 200px; 
-    background: transparent;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
+    flex-direction: column;
+    margin-top: 250px; /* Adjusted margin */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-#result-content:after {
-    display: none;
+/* Creating the smaller cloud bubbles */
+#result-content::before, #result-content::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    z-index: -1; /* Place bubbles behind the main content */
+}
+
+#result-content::before {
+    width: 100px;
+    height: 100px;
+    top: -40px;
+    left: 30px;
+}
+
+#result-content::after {
+    width: 120px;
+    height: 120px;
+    top: -20px;
+    right: 10px;
 }
 
 #restaurant-info {
@@ -85,8 +118,8 @@ body, html {
 }
 
 #restaurant-info p {
-    margin: 8px 0;
-    font-size: 1.6rem;
+    margin: 5px 0;
+    font-size: 1.4rem; /* Slightly smaller font to fit */
 }
 
 .title {
@@ -98,20 +131,33 @@ body, html {
     font-family: 'Gungsuh', serif;
 }
 
-#start-button {
+.rainbow-button {
+    border: none;
+    cursor: pointer;
+    font-family: 'Gungsuh', serif;
+    color: white; /* 글자색은 흰색 */
+    /* 검은색 테두리 효과 (text-shadow 4방향) */
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, 
+        #FF0000 0%, #FF7F00 14.2%, #FFFF00 28.4%, #00FF00 42.6%, 
+        #0000FF 56.8%, #4B0082 71%, #8B00FF 85.2%);
+}
+
+#start-button, .category-button {
     font-size: 1.5rem;
     padding: 10px 20px;
     border-radius: 10px;
-    border: none;
-    background-color: #ff4757;
-    color: white;
-    cursor: pointer;
-    font-family: 'Gungsuh', serif;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 280px;
 }
 
 .loading-text {
-    font-size: 2rem;
+    font-size: 20px; /* As requested */
     color: white;
     text-shadow: 2px 2px 4px #000000;
     text-align: center;
@@ -125,12 +171,6 @@ body, html {
     font-size: 1rem;
     padding: 8px 15px;
     border-radius: 8px;
-    border: none;
-    background-color: #ff4757;
-    color: white;
-    cursor: pointer;
-    font-family: 'Gungsuh', serif;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 #copy-address-button {
