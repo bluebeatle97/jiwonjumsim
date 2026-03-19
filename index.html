@@ -1,14 +1,28 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>지원지원지원이 점심메뉴 추천기</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <div id="app-container">
+        <div id="start-screen" class="screen active">
+            <div class="title">지원지원지원이 점심메뉴 추천기</div>
+            <button id="start-button">게임 스타트</button>
+        </div>
+
+        <div id="loading-screen" class="screen">
+            <div class="loading-text">점심메뉴고르는중...</div>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <div id="result-text"></div>
+            <button id="reset-button">되돌리기</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
